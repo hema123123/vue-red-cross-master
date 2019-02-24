@@ -1,10 +1,6 @@
 <template>
-  <div>
-    <div class="msearch">
-      <div class="m-container">
-        search
-      </div>
-    </div>
+  <page :page-background="true">
+    <search slot="top" :value="22"></search>
     <div class="mbanner">
       <div class="m-container">
         <div class="mbanner-main">
@@ -27,7 +23,8 @@
         <p class="mbanner-footer">捐赠1000-3000元，资助一名贵州省黔西南州寒门学子，帮助他们克服家庭困难，顺利完成学业。</p>
       </div>
     </div>
-  </div>
+    <div style='height: 500px;background: pink'></div>
+  </page>
 </template>
 
 <script>
@@ -66,29 +63,22 @@
   }
 </script>
 <style lang="scss" scoped>
-  .m-container {
-    margin: 0 20px;
-  }
-
-  .msearch {
-    background: #333;
-    color: #fff;
-  }
-
   .mbanner {
     position: relative;
+    background: #fff;
     &:after {
       width: 100%;
-      height: 150px;
+      height: 1.5rem;
       content: "";
       position: absolute;
       top: 0;
       left: 0;
-      background: #333;
-      z-index: -1;
+      background: $bgColor3;
     }
 
     &-main {
+      position: relative;
+      z-index: 1;
       padding: 10px;
       border-radius: 5px;
       background: #fff;
@@ -106,16 +96,11 @@
       }
     }
     &-footer {
-      margin: 10px 0;
       color: #999
     }
   }
 </style>
 <style lang="scss">
-  .cube-input-field {
-    background: #333 !important;
-  }
-
   .cube-slide-dots {
     bottom: 12px !important;
     & > span {

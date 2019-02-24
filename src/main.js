@@ -8,12 +8,12 @@ import store from '@/store'
 // libs
 import '@/libs/cube-ui'
 import '@/libs/rem'
+import '@/component'
 
 import httpRequest from '@/libs/axios'
 
 Vue.config.productionTip = false
-
-Vue.prototype.$http = httpRequest // ajax请求方法
+Vue.prototype.$http = httpRequest // axios请求方法
 
 /* eslint-disable no-new */
 new Vue({
